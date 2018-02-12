@@ -17,3 +17,5 @@
         - openssl-devel
         - readline-devel
         - libffi-devel
+        - sqlite-devel
+        - postgresql-devel
