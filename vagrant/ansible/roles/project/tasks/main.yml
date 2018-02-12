@@ -1,0 +1,2 @@
+- include: "{{ item }}.yml"
+  with_items: "{{ packages }}"

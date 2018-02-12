@@ -1,0 +1,11 @@
+---
+- name: Include ddl conf.
+  include_vars: "ddl.yml"
+
+- name: database exists
+  stat: path="{{ db_file_path }}"
+  register: database
+
+- name: Create Database
+  shell: sqlite3 {{ db_file_path }} < {{ db_ddl_file }}
+  when: not database.stat.exists
