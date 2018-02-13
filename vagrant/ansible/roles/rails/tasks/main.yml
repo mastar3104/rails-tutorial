@@ -1,4 +1,0 @@
----
-- name: install rails
-  become: true
-  shell: gem install rails
